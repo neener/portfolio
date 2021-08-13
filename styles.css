@@ -10,6 +10,11 @@ body {
   align-items: stretch;
 }
 
+.email {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .content {
   order: 1;
   flex-basis: 100%;

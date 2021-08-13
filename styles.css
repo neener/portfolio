@@ -1,0 +1,112 @@
+html, body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.content {
+  order: 1;
+  flex-basis: 100%;
+}
+
+.portfolio {
+  order: 2;
+  flex-basis: 100%;
+  background-color: rgb(23,23,23);
+  height: 250px;
+  overflow: auto;
+  
+}
+
+.scroll-info {
+  padding: 5px;
+}
+
+h1 {
+  color: rgb(212,212,212);
+  font-size: 20px;
+}
+
+h2 {
+  color: rgb(212,212,212);
+  font-size: 18px;
+  /* text-decoration: underline; */
+  font-weight: 400;
+}
+
+h3 {
+  color:rgb(247,169,13);
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+h4 {
+  color:rgb(247,169,13);
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h5 {
+  color: rgb(212,212,212);
+  font-size: 13px;
+  margin-bottom: 0;
+  margin-top: 2px;
+}
+
+.padding-top {
+  padding-top: 10px;
+}
+
+h6 {
+  color:rgb(247,169,13);
+  font-size: 13px;
+  font-weight: 400;
+  margin-top:0;
+  margin-bottom:0;
+}
+
+p {
+  color: rgb(212,212,212);
+  font-size: 13px;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+a {
+  color:rgb(247,169,13);
+  font-size: 13px;
+}
+
+
+@media screen and (min-width: 600px) {
+  body {
+    flex-wrap: nowrap;
+  }
+  .content {
+    flex: 1;
+    flex-basis: 200px;
+  }
+  .portfolio {
+    flex: 2;
+    flex-basis: 200px;
+    margin-left: 10px;
+    /* height: 425px; */
+    box-sizing: border-box;
+    resize: horizontal;
+    max-width: 100%;
+    height: calc(100vh - 16px);
+  }
+  .scroll-info {
+    width: 100%;
+    padding-bottom: 75%;
+  }
+}

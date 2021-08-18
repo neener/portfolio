@@ -110,6 +110,7 @@ a {
     resize: horizontal;
     max-width: 100%;
     height: calc(100vh - 16px);
+    margin-top: 0px;
   }
   .scroll-info {
     width: 100%;

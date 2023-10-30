@@ -21,34 +21,33 @@ function createCarousel(containerId, items) {
   let currentItemIndex = 0;
 
   function updateContent() {
-      const currentItem = items[currentItemIndex];
-      contentContainer.innerHTML = '';
+    const currentItem = items[currentItemIndex];
+    contentContainer.innerHTML = '';
 
-      if (currentItem.type === 'image') {
-          const img = document.createElement('img');
-          img.alt = 'Image Carousel';
-          img.loading = 'lazy'; // Add lazy loading attribute
-          img.src = currentItem.src;
-          img.onload = () => {
-            // console.log('Image loaded:', currentItem.src);
-            img.onclick = function () {
-              openModal(currentItem);
-            };
-          };
-          contentContainer.appendChild(img);
-      } else if (currentItem.type === 'youtube') {
-        const iframe = document.createElement('iframe');
-        iframe.width = '560';
-        iframe.height = '315';
-        iframe.src = `https://www.youtube.com/embed/${currentItem.videoId}`;
-        iframe.frameBorder = '0';
-        iframe.allowFullscreen = true;
-        contentContainer.appendChild(iframe);
-      }
+    if (currentItem.type === 'image') {
+      const container = document.createElement('div');
+      container.classList.add('image-placeholder'); // Add the placeholder class
 
-    // Preload the next media item (e.g., next image or video) here
-    // preloadMedia();
-
+      const img = document.createElement('img');
+      img.alt = 'Image Carousel';
+      img.loading = 'lazy'; // Add lazy loading attribute
+      img.src = currentItem.src;
+      img.onload = () => {
+        // console.log('Image loaded:', currentItem.src);
+        img.onclick = function () {
+          openModal(currentItem);
+        };
+      };
+      contentContainer.appendChild(img);
+    } else if (currentItem.type === 'youtube') {
+      const iframe = document.createElement('iframe');
+      iframe.width = '560';
+      iframe.height = '315';
+      iframe.src = `https://www.youtube.com/embed/${currentItem.videoId}`;
+      iframe.frameBorder = '0';
+      iframe.allowFullscreen = true;
+      contentContainer.appendChild(iframe);
+    }
   }
 
   prevButton.addEventListener('click', () => {

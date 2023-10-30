@@ -1,55 +1,93 @@
 body {
+  margin: 0;
+  padding: 0;
   background-color: #D9D9D9;
   font-family: "Inter", sans-serif;
 }
 
-.container.header {
+.container {
   display: grid;
-  border: 1px solid purple;
+  grid-template-columns: 3fr 1fr; /* 3/4 and 1/4 of the available width */
+  align-items: center; /* Center items vertically */
+  background-color: purple; /* Just for visualization */
+  color: white; /* Text color */
+  height: 100px; /* Adjust the height as needed */
 }
 
-.item.name {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  /* grid-row-start: row1-start;
-  grid-row-end: 2; */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid green;
   font-size: 2rem;
   text-transform: uppercase;
+  padding: 10px; /* Add padding for spacing within the header */
 }
 
-.item.icon {
-  grid-column-start: 5;
-  grid-column-end: 6;
-  border: 1px solid green;
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green; /* Just for visualization */
+  border: 1px solid lightgreen;
 }
 
-.item.webdev {
-  border: 1px solid plum;
+.container.main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 500px; /* Adjust the height as needed */
+  background-color: salmon; /* Just for visualization */
 }
 
-.container.year {
+.item.info {
+  background-color: blue;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.year {
   border: 1px solid darkblue;
-  font-size: .75em;
-}
-
-.item.year {
   color: #727272;
   background-color: lightsteelblue;
+  font-size: .75em;
   width: max-content;
 }
 
-.item.year.archive {
+.archive {
   text-transform: uppercase;
 }
 
-.item.project-title {
+.project-title {
   text-transform: uppercase;
   font-size: initial;
 }
 
-.item.link a {
+.link a {
   color: #3F4ED8;
+}
+
+.item.carousel {
+  background-color: hotpink;
+  grid-column-start: 2;
+  grid-column-end: 10;
+  grid-row-start: 6;
+  grid-row-end: 8;
+}
+
+.item.description {
+  background-color: lightblue;
+  grid-column-start: 2;
+  grid-column-end: 10;
+  grid-row-start: 11;
+  grid-row-end: 13;
+}
+
+.footer {
+  background-color: purple; 
+  text-align: center;
 }
 
 .carousel-container {
@@ -57,10 +95,6 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 20px;
-}
-.carousel-content {
-  margin-bottom: 10px;
 }
 
 img, iframe {
@@ -79,15 +113,12 @@ img, iframe {
   background-color: rgba(0, 0, 0, 0.7);
   overflow: auto;
 }
+
 .modal-content {
   display: block;
   margin: auto;
   max-width: 90%;
   max-height: 90%;
-}
-
-.item.description {
-  padding-bottom: 20px;
 }
 
 /* Customize the scrollbar for webkit-based browsers (Chrome, Safari) */

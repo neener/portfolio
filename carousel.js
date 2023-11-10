@@ -168,9 +168,18 @@ preloadMedia(carousel1Items.concat(carousel2Items, carousel3Items, carousel4Item
   }
 }
 
-window.onclick = function(event) {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-};
+window.addEventListener('click', function(event) {
+  if (event.target === modal) {
+      closeModal();
+  }
+});
 
+window.addEventListener('touchstart', function(event) {
+  if (event.target === modal) {
+      closeModal();
+  }
+});
+
+function closeModal() {
+  modal.style.display = 'none';
+}

@@ -1,119 +1,204 @@
-html, body {
-  height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 body {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  background-color: #D9D9D9;
+  font-family: "Inter", sans-serif;
 }
 
-.email {
+.container.header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: start;
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 
-.content {
-  order: 1;
-  flex-basis: 100%;
+.whoami{
+ font-size: 0.50em;;
 }
 
-.portfolio {
-  order: 2;
-  flex-basis: 100%;
-  background-color: rgb(23,23,23);
-  height: 500px;
+.item.header {
+  grid-column-start: 2;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.item.icon {
+  grid-column-start: 11;
+  grid-column-end: 13;
+  display: flex;
+  justify-content: center;
+}
+
+.container.main{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 40px;
+}
+
+.item.year {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  color: #727272;
+  font-size: .75em;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.date {
+  display: inline;
+  border: 1px solid darkblue;
+  padding: 2px;
+}
+
+.item.info {
+  grid-column-start: 2;
+  grid-column-end: 10;
+}
+
+.archive {
+  text-transform: uppercase;
+}
+
+.project-title {
+  text-transform: uppercase;
+  font-size: initial;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.link a {
+  color: #3F4ED8;
+  display: flex;
+  height: 25px;
+}
+
+.item.carousel {
+  grid-column-start: 2;
+  grid-column-end: 10;
+}
+
+.item.description {
+  grid-column-start: 2;
+  grid-column-end: 10;
+  font-size: small;
+  margin-top: 6px;
+}
+
+.container.footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  height: 100px; 
+  align-items: center;
+}
+
+.item.footer {
+  grid-column-start: 2;
+  grid-column-end: 9;
+  font-size: 1rem;
+}
+
+.item.footer .item.icon {
+  align-items: self-end;
+} 
+
+.carousel-container {
+  aspect-ratio: 16/9;
+}
+
+.carousel-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carouselContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.carouselContent img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.carousel-controls {
+  display: flex;
+  grid-gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   overflow: auto;
-  margin-top: 14px;
 }
 
-.scroll-info {
-  padding: 5px;
-  margin-left: 5px;
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 90%;
 }
 
-h1 {
-  color: rgb(212,212,212);
-  font-size: 20px;
+/* Customize the scrollbar for webkit-based browsers (Chrome, Safari) */
+
+/* Customize the track */
+::-webkit-scrollbar {
+  width: 20px; 
 }
 
-h2 {
-  color: rgb(212,212,212);
-  font-size: 18px;
-  /* text-decoration: underline; */
-  font-weight: 400;
+/* Customize the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: #DAD8DA; /* Set the background color of the thumb */
+  border-radius: 12px; /* Set the border radius to round the edges */
+  border: 1px solid #646A63;
+  box-shadow: 2px 2px 10px #A2A2A2;
 }
 
-h3 {
-  color:rgb(255, 204, 0);
-  font-size: 14px;
-  font-weight: 400;
-  font-style: italic;
-  margin-bottom: 5px;
+/* Customize the track (the background behind the thumb) */
+::-webkit-scrollbar-track {
+  background: #DCDCDC; /* Set the background color of the track */
+  border-radius: 12px; /* Set the border radius to round the edges */
+  border: 1px solid #9C9D9C;
 }
 
-h4 {
-  color:rgb(255, 204, 0);
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
+/* ::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  display: block;
+  width: 40px; 
+  margin-right: 20px;
+} */
 
-h5 {
-  color: rgb(212,212,212);
-  font-size: 13px;
-  margin-bottom: 0;
-  margin-top: 2px;
-}
+/* For Firefox and some newer versions of Edge */
+/* This is a basic example; you can adjust the properties to fit your design */
+/* Note: The scrollbar styling in Firefox may require the "scrollbar-width" property to be set in the body or another appropriate selector */
 
-.padding-top {
-  padding-top: 10px;
-}
-
-h6 {
-  color:rgb(255, 204, 0);
-  font-size: 13px;
-  font-weight: 400;
-  margin-top:0;
-  margin-bottom:0;
-}
-
-p {
-  color: rgb(212,212,212);
-  font-size: 13px;
-  margin-top: 0;
-  font-weight: 400;
-}
-
-a {
-  color:rgb(255, 204, 0);
-  font-size: 13px;
-}
-
-
-@media screen and (min-width: 600px) {
-  body {
-    flex-wrap: nowrap;
-  }
-  .content {
-    flex: 1;
-    flex-basis: 200px;
-  }
-  .portfolio {
-    flex: 2;
-    flex-basis: 200px;
-    margin-left: 10px;
-    /* height: 425px; */
-    box-sizing: border-box;
-    resize: horizontal;
-    max-width: 100%;
-    height: calc(100vh - 16px);
-    margin-top: 0px;
-  }
-  .scroll-info {
-    width: 100%;
-    padding-bottom: 75%;
-  }
+/* Customize the thumb */
+.scrollbar {
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+  scrollbar-color: #888 #f1f1f1; /* Set the thumb and track colors */
 }

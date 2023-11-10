@@ -161,7 +161,6 @@ preloadMedia(carousel1Items.concat(carousel2Items, carousel3Items, carousel4Item
 
       youtubeThumbnail.onerror = function() {
           console.error('Error loading YouTube thumbnail.');
-          // You can display a default image or show an error message here.
       };
 
       youtubeThumbnail.src = youtubeThumbnailUrl;

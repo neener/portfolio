@@ -88,6 +88,7 @@ body {
   grid-column-start: 2;
   grid-column-end: 10;
   font-size: small;
+  margin-top: 6px;
 }
 
 .container.footer {
@@ -139,6 +140,7 @@ body {
 
 .carousel-controls {
   display: flex;
+  grid-gap: 5px;
   align-items: center;
   justify-content: center;
   height: 36px;

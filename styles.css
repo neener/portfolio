@@ -12,7 +12,7 @@ body {
   margin-top: 20px;
 }
 
-.whoami{
+.whoami {
  font-size: 0.50em;;
 }
 
@@ -32,7 +32,7 @@ body {
   justify-content: center;
 }
 
-.container.main{
+.container.main {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   margin-bottom: 40px;
@@ -88,12 +88,12 @@ body {
   grid-column-start: 2;
   grid-column-end: 10;
   font-size: small;
-  margin-top: 6px;
+  margin-top: 10px;
 }
 
 .container.footer {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   height: 100px; 
   align-items: center;
 }
@@ -144,6 +144,10 @@ body {
   align-items: center;
   justify-content: center;
   height: 36px;
+}
+
+.prevButton, .nextButton {
+  padding: 3px;
 }
 
 .modal {

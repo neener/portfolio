@@ -7,7 +7,7 @@ body {
 
 .container.header {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   align-items: start;
   margin-top: 20px;
 }
@@ -34,7 +34,7 @@ body {
 
 .container.main{
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   margin-bottom: 40px;
 }
 

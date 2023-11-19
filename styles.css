@@ -1,3 +1,10 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -69,8 +76,7 @@ body {
 }
 
 .item.carousel {
-  grid-column-start: 2;
-  grid-column-end: 10;
+  grid-column: 2 / span 8;
 }
 
 .item.description {
@@ -103,19 +109,7 @@ body {
 }
 
 .tns-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-top: 10px;
-}
-
-.prevButton, .nextButton {
-  padding: 3px;
-  font-size: 1.2rem;
-  background-color: #3F4ED8;
-  color: #fff;
-  border: none;
-  cursor: pointer;
 }
 
 .tns-item {
@@ -135,8 +129,31 @@ body {
   height: 100%;
 }
 
-.tns-controls button {
+.tns-controls {
   display: none;
+}
+
+/* Style the navigation dots */
+.tns-nav {
+  grid-column: 2 / span 8;
+  grid-row: 2;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.tns-nav button {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #aaa;
+  transition: background-color 0.3s;
+}
+
+.tns-nav button.tns-nav-active {
+  background-color: grey;
 }
 
 /* Customize the scrollbar for webkit-based browsers (Chrome, Safari) */

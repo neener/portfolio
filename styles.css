@@ -1,8 +1,8 @@
 body {
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #D9D9D9;
-  font-family: "Inter", sans-serif;
 }
 
 .container.header {
@@ -13,7 +13,8 @@ body {
 }
 
 .whoami {
- font-size: 0.50em;;
+ font-size: 0.50em;
+ padding-top: 5px;
 }
 
 .item.header {
@@ -64,19 +65,14 @@ body {
   text-transform: uppercase;
 }
 
-.project-title {
+.project-title a {
+  color: #3F4ED8;
   text-transform: uppercase;
   font-size: initial;
-  height: 20px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-}
-
-.link a {
-  color: #3F4ED8;
-  display: flex;
-  height: 25px;
 }
 
 .item.carousel {
@@ -143,7 +139,7 @@ body {
   grid-gap: 5px;
   align-items: center;
   justify-content: center;
-  height: 36px;
+  height: 40px;
 }
 
 .prevButton, .nextButton {

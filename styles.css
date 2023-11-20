@@ -91,6 +91,7 @@ body {
   grid-template-columns: repeat(10, 1fr);
   height: 100px; 
   align-items: center;
+  font-family: 'Inter', sans-serif;
 }
 
 .item.footer {

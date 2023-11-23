@@ -1,15 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-  
-  var carouselElements = [
-    document.getElementById('carousel1'),
-    document.getElementById('carousel2'),
-    document.getElementById('carousel3'),
-    document.getElementById('carousel4'),
-    document.getElementById('carousel5'),
-  ];
+  var containers = document.querySelectorAll('.container.main');
 
-  carouselElements.forEach(function (element) {
-    new Flickity(element, {
+  containers.forEach(function (container) {
+    var carouselElement = container.querySelector('.carousel-cell');
+    new Flickity(carouselElement, {
       cellAlign: 'left',
       contain: true,
       wrapAround: false,

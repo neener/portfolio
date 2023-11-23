@@ -101,7 +101,20 @@ body {
 
 .item.footer .item.icon {
   align-items: self-end;
-} 
+}
+
+.item.image {
+  grid-column: 2 / span 8;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.single-image img{
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+}
 
 /* Flickity styles */
 

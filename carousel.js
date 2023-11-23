@@ -1,60 +1,43 @@
+// Wait for the DOM to be ready
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialize Tiny Slider for each carousel
-  var carousels = document.querySelectorAll('.carousel-container');
+  // Get the carousel element
+  var carouselElement1 = document.getElementById('carousel1');
 
-  carousels.forEach(function (carousel, index) {
-    requestAnimationFrame(function () {
-      var slider = tns({
-        container: carousel,
-        items: 1,
-        slideBy: 'page',
-        mouseDrag: true,
-        swipeAngle: false,
-        speed: 400,
-        nav: true,
-        navPosition: 'bottom',
-        arrowKeys: true,
-        preventActionWhenRunning: true,
-        autoHeight: true,
-        controlsContainer: document.getElementById('tns-controls' + (index + 1)), // Use the controls container
-        onInit: function (info, eventName) {
-          // Force refresh the slider after initialization
-          slider.refresh();
-        },
-      });
-
-      // Add unique ID to each slider to handle multiple sliders
-      var sliderId = 'slider' + (index + 1);
-      carousel.setAttribute('data-slider-id', sliderId);
-    });
+  // Initialize Flickity
+  var flky = new Flickity(carouselElement1, {
+    // Flickity options go here
+    // For example:
+    cellAlign: 'left',
+    contain: true,
+    wrapAround: false,
+    // Add more options as needed
   });
 
-  // Add event listener for arrow keys
-  document.addEventListener('keydown', function (e) {
-    // Check if arrow key is pressed
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-      // Find the carousel in focus
-      var focusedCarousel = document.querySelector('.carousel-container:focus');
+  var carouselElement2 = document.getElementById('carousel2');
+  var flky2 = new Flickity(carouselElement2, {
+    cellAlign: 'left',
+    contain: true,
+    wrapAround: false,
+  });
 
-      // Check if there is a focused carousel
-      if (focusedCarousel) {
-        // Find the corresponding slider instance
-        var sliderId = focusedCarousel.getAttribute('data-slider-id');
-        var slider = tns.instances[sliderId];
+  var carouselElement3 = document.getElementById('carousel3');
+  var flky3 = new Flickity(carouselElement3, {
+    cellAlign: 'left',
+    contain: true,
+    wrapAround: false,
+  });
 
-        // Check if the slider instance exists
-        if (slider) {
-          // Prevent default arrow key behavior
-          e.preventDefault();
+  var carouselElement4 = document.getElementById('carousel4');
+  var flky4 = new Flickity(carouselElement4, {
+    cellAlign: 'left',
+    contain: true,
+    wrapAround: false,
+  });
 
-          // Navigate the slider based on the arrow key pressed
-          if (e.key === 'ArrowLeft') {
-            slider.goTo('prev');
-          } else if (e.key === 'ArrowRight') {
-            slider.goTo('next');
-          }
-        }
-      }
-    }
+  var carouselElement5 = document.getElementById('carousel5');
+  var flky5 = new Flickity(carouselElement5, {
+    cellAlign: 'left',
+    contain: true,
+    wrapAround: false,
   });
 });

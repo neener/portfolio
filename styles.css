@@ -14,7 +14,7 @@ body {
 
 .container.header {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: auto;
   align-items: start;
   margin-top: 20px;
 }
@@ -25,18 +25,16 @@ body {
 }
 
 .item.header {
-  grid-column-start: 2;
-  grid-column-end: 9;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  grid-column-start: 1;
+  margin-left: 45px;
   font-size: 2rem;
   text-transform: uppercase;
 }
 
 .container.main {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  margin-bottom: 40px;
+  grid-template-columns: auto;
+  margin: 10px 48px;
 }
 
 .item.year {
@@ -66,14 +64,15 @@ body {
 }
 
 .project-title a {
-  color: #3F4ED8;
+  color: blue;
   text-transform: uppercase;
-  font-size: initial;
+  /* text-decoration: none; */
+  /* text-shadow: 1px 1px 2px #FF0000; */
+  font-size: larger;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-size: larger;
   font-family: 'Inter', sans-serif;
   padding-bottom: 20px;
 }
@@ -82,19 +81,20 @@ body {
   grid-column-start: 2;
   grid-column-end: 10;
   font-size: small;
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .container.footer {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: auto;
   height: 100px; 
   align-items: center;
   font-family: 'Inter', sans-serif;
+  margin-left: 45px;
 }
 
 .item.footer {
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-column-end: 9;
   font-size: 1rem;
 }

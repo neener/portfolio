@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
       cellAlign: 'left',
       contain: true,
       wrapAround: false,
+      fullscreen: true,
     });
   });
 });

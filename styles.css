@@ -12,6 +12,10 @@ body {
   background-color: #D9D9D9;
 }
 
+hr {
+  border: 1px solid #666666;
+}
+
 .container.header {
   display: grid;
   grid-template-columns: auto;
@@ -20,15 +24,17 @@ body {
 }
 
 .whoami {
- font-size: 0.50em;
- padding-top: 5px;
+  padding-top: 5px;
+  font-size: small;
+  font-weight: 200;
 }
 
 .item.header {
   grid-column-start: 1;
   margin-left: 45px;
-  font-size: 2rem;
+  font-size: xx-large;
   text-transform: uppercase;
+  font-weight: 900;
 }
 
 .container.main {
@@ -42,46 +48,49 @@ body {
   grid-column-end: 6;
   color: #727272;
   font-size: .75em;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
 .date {
-  display: inline;
-  border: 1px solid darkblue;
-  padding: 2px;
+  font-weight: 900;
+  color: black;
 }
 
 .item.info {
   grid-column-start: 2;
-  grid-column-end: 10;
 }
 
 .archive {
   text-transform: uppercase;
 }
 
+.project-title {
+  margin: 10px 0;
+}
+
 .project-title a {
-  color: blue;
+  color: black;
   text-transform: uppercase;
-  /* text-decoration: none; */
-  /* text-shadow: 1px 1px 2px #FF0000; */
+  font-weight: bold;
   font-size: larger;
-  height: 40px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   font-family: 'Inter', sans-serif;
   padding-bottom: 20px;
+  text-decoration: none;
+  border-bottom: 1px solid blue;
+  padding-bottom: 2px;
 }
 
 .item.description {
   grid-column-start: 2;
   grid-column-end: 10;
   font-size: small;
-  margin: 40px 0;
+  margin: 40px 0 15px 0;
 }
 
 .container.footer {
@@ -104,11 +113,17 @@ body {
 }
 
 /* Flickity styles */
+/* .carousel-wrapper {
+  background-color: #666666;
+  padding: 20px;
+  margin: 0 -20px;
+} */
 
 .item.carousel {
   grid-column: 2 / span 8;
   width: 100%;
   margin: 0 auto;
+  background-color: transparent;
 }
 
 .carousel-cell {

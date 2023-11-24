@@ -60,6 +60,7 @@ hr {
 
 .item.info {
   grid-column-start: 2;
+  grid-column-end: 6;
 }
 
 .archive {
@@ -123,7 +124,7 @@ hr {
   grid-column: 2 / span 8;
   width: 100%;
   margin: 0 auto;
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 
 .carousel-cell {

@@ -200,9 +200,9 @@ hr {
   }
 
   .dot {
-    width: 8px;
-    height: 8px; 
-    margin: 0 1px; 
+    width: 10px;
+    height: 10px; 
+    margin: 0 4px !important; 
     background-color: #ccc; 
     border-radius: 50%; 
   }

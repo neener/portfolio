@@ -34,6 +34,10 @@ hr {
   text-transform: uppercase;
 }
 
+.year.last-year, .year.archive {
+  padding-top: 15px;
+}
+
 .project-title {
   padding: 2px 0 10px 20px;
 }

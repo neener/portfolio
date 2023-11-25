@@ -170,6 +170,8 @@ hr {
     padding: 10px; 
     width: calc(100vw - 10px); 
     overflow: visible;
+    margin-bottom: 30px;
+    position: relative;
   }
 
   .carousel-cell {
@@ -191,7 +193,9 @@ hr {
 
   .flickity-page-dots {
     display: block;
-    bottom: 10px;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
   }
   
   .description {

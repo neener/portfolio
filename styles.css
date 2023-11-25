@@ -192,10 +192,19 @@ hr {
   }
 
   .flickity-page-dots {
-    display: block;
+    display: flex;
+    justify-content: center;
     position: absolute;
     bottom: 5px;
     width: 100%;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px; 
+    margin: 0 5px; 
+    background-color: #ccc; 
+    border-radius: 50%; 
   }
   
   .description {

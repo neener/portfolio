@@ -84,6 +84,7 @@ hr {
 .carousel-cell-image {
   display: block;
   max-height: 100%;
+  max-width: 100%;
 }
 
 .carousel-cell iframe {
@@ -168,6 +169,7 @@ hr {
   .carousel {
     padding: 10px; 
     width: calc(100vw - 10px); 
+    overflow: visible;
   }
 
   .carousel-cell {
@@ -179,9 +181,22 @@ hr {
     height: 100%;
   }
 
+  .carousel-cell-image {
+    max-width: 100%;
+  }
+
+  .flickity-prev-next-button {
+    display: none;
+  }
+
+  .flickity-page-dots {
+    display: block;
+    bottom: 10px;
+  }
+  
   .description {
     font-size: smaller; 
-    margin: 15px 10px 15px 10px; 
+    margin: 30px 10px 15px 10px;
   }
 
   .footer {

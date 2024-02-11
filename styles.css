@@ -27,10 +27,48 @@ hr {
   margin: 20px 0 20px 20px;
 }
 
-.whoami {
+.links {
+  display: flex;
+  margin: 20px 20px;
+}
+
+.whoami, .about {
   font-family: 'Inter', sans-serif;
   font-size: small;
   font-weight: 200;
+}
+
+.about {
+  padding-left: 10px;
+}
+
+.about-me {
+  display: block;
+  width: 75%;
+  margin: 20px 0;
+  font-size: small;
+}
+
+.whoami a, .about a {
+  text-decoration: none;
+  color: inherit;
+  border-left: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
+  border-radius: 15px;
+  padding: 5px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), transparent);
+}
+
+.about-section {
+  padding-left: 20px;
+}
+
+.headshot img {
+  display: block;
+  max-height: 100%;
+  max-width: 75%;
+  margin: 10px 0;
 }
 
 .date {

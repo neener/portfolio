@@ -84,12 +84,10 @@ hr {
 
 .project-title a {
   font-family: 'HelveticaNow', sans-serif;
-  color: black;
+  color: blue;
   text-transform: uppercase;
   font-weight: bold;
   font-size: medium;
-  text-decoration: none;
-  border-bottom: 1px solid blue;
 }
 
 
@@ -149,7 +147,6 @@ hr {
 
 /* Customize the thumb (the draggable part of the scrollbar) */
 ::-webkit-scrollbar-thumb {
-  background: #DAD8DA; /* Set the background color of the thumb */
   border-radius: 12px; /* Set the border radius to round the edges */
   border: 1px solid #646A63;
   box-shadow: 2px 2px 10px #A2A2A2;
@@ -157,7 +154,6 @@ hr {
 
 /* Customize the track (the background behind the thumb) */
 ::-webkit-scrollbar-track {
-  background: #DCDCDC; /* Set the background color of the track */
   border-radius: 12px; /* Set the border radius to round the edges */
   border: 1px solid #9C9D9C;
 }
@@ -200,7 +196,6 @@ hr {
 
   .project-title a {
     font-size: 1rem;
-    border-bottom: 1px solid blue;
   }
 
   .carousel {

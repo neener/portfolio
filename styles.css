@@ -182,7 +182,7 @@ hr {
 @media only screen and (max-width: 600px) {
  
   .header {
-    font-size: large;
+    font-size: 1.5rem;
     margin: 10px 0 10px 10px;
   }
 
@@ -199,7 +199,7 @@ hr {
   }
 
   .project-title a {
-    font-size: small;
+    font-size: 1rem;
     border-bottom: 1px solid blue;
   }
 

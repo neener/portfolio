@@ -59,7 +59,7 @@ hr {
 }
 
 .about-section {
-  padding: 20px;
+  padding: 15px 20px;
 }
 
 .about-section a { 
@@ -244,8 +244,4 @@ hr {
     margin: 35px 10px 15px 10px;
   }
 
-  .footer {
-    font-size: 0.9rem; 
-    margin: 25px 10px; 
-  }
 }

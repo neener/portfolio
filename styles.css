@@ -59,13 +59,13 @@ hr {
 }
 
 .about-section {
-  padding-left: 20px;
+  padding: 20px;
 }
 
 .about-section a { 
   text-decoration: none;
   color: black;
-  background-color: lightskyblue;
+  text-decoration: underline;
   font-size: smaller;
 }
 
@@ -135,7 +135,7 @@ hr {
 }
 
 .footer {
-  font-size: 1rem;
+  font-size: 13px;
   margin: 20px;
 }
 /* Customize the scrollbar for webkit-based browsers (Chrome, Safari) */
